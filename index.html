@@ -54,12 +54,29 @@
       }
     }
 
+    function game() {
+      for (let rounds = 0; rounds < 5; rounds++) {
+        const playerSelection = prompt("Rock, paper, or scissors?").toLowerCase();
+        const computerSelection = getComputerChoice();
+        console.log(playRound(playerSelection, computerSelection));
+        console.log(playerScore);
+        console.log(computerScore);
+      }
+      if (playerScore > computerScore) {
+        alert("You win!");
+      }
+      else if(computerScore > playerScore) {
+        alert("You lose!");
+      }
+      else {
+        alert("It's a draw!");
+      }
+    }
+
+
     
-    const playerSelection = prompt("Rock, paper, or scissors?");
-    const computerSelection = getComputerChoice();
-    console.log(playRound(playerSelection, computerSelection));
-    console.log(playerScore);
-    console.log(computerScore);
+    
+    game()
 
   </script>
 </body>
